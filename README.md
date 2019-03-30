@@ -6,4 +6,4 @@
 
 ## License
 
-[MIT](https://github.com/dleliuhin/MDSP/blob/master/LICENSE.md)
+[MIT](https://github.com/dleliuhin/MDSP/blob/master/LICENSE)
