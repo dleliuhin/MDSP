@@ -11,7 +11,7 @@
 
   2. by summing the weighted and shifted pulsed feedback.
 
-  ![](https://latex.codecogs.com/svg.latex?h(n_1,&space;n_2)&space;=&space;\begin{bmatrix}
+  ![equation](https://latex.codecogs.com/svg.latex?h(n_1,&space;n_2)&space;=&space;\begin{bmatrix}
 &space;3&space;&&space;3&space;&&space;2&space;&&space;2&space;&&space;1&space;&&space;1&space;&&space;2\\
 &space;1&space;&&space;1&space;&&space;4&space;&&space;3&space;&&space;2&space;&&space;2&space;&&space;\\
 &space;2&space;&&space;2&space;&&space;3&space;&&space;4&space;&&space;&&space;5&space;&&space;4\\
