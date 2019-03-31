@@ -57,20 +57,24 @@ xls_range_2 = 'A975:M988';
 Y_1 = xlsread(file_name_1, xls_range_1);
 Y_2 = xlsread(file_name_2, xls_range_2);
 
-%figure;
+figure;
 title('Метод 1. Вычисление дискретной свертки.', 'FontSize', 18);
-surf(Y_1);
-snapnow;
+surf(Y_1)
 saveas(gcf, '../results/method_1', 'jpg');
 
-%figure;
+figure;
 title('Метод 2. Суммирование взвешенных и сдвинутых импульсных откликов.', ...
       'FontSize', 18);
-surf(Y_2);
-snapnow;
+surf(Y_2)
 saveas(gcf, '../results/method_2', 'jpg');
 
-%save('../results/workspace.mat');
+figure;
+surf(Y_1);
+view(2);
+snapnow;
+saveas(gcf, '../results/2D-view', 'jpg');
+
+save('../results/workspace.mat');
 
 close all;
 end

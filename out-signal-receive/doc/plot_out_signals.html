@@ -86,23 +86,29 @@ xls_range_2 = <span class="string">'A975:M988'</span>;
 Y_1 = xlsread(file_name_1, xls_range_1);
 Y_2 = xlsread(file_name_2, xls_range_2);
 
-<span class="comment">%figure;</span>
+figure;
 title(<span class="string">'&#1052;&#1077;&#1090;&#1086;&#1076; 1. &#1042;&#1099;&#1095;&#1080;&#1089;&#1083;&#1077;&#1085;&#1080;&#1077; &#1076;&#1080;&#1089;&#1082;&#1088;&#1077;&#1090;&#1085;&#1086;&#1081; &#1089;&#1074;&#1077;&#1088;&#1090;&#1082;&#1080;.'</span>, <span class="string">'FontSize'</span>, 18);
-surf(Y_1);
-snapnow;
+surf(Y_1)
+<span class="comment">%snapnow;</span>
 saveas(gcf, <span class="string">'../results/method_1'</span>, <span class="string">'jpg'</span>);
 
-<span class="comment">%figure;</span>
+figure;
 title(<span class="string">'&#1052;&#1077;&#1090;&#1086;&#1076; 2. &#1057;&#1091;&#1084;&#1084;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1080;&#1077; &#1074;&#1079;&#1074;&#1077;&#1096;&#1077;&#1085;&#1085;&#1099;&#1093; &#1080; &#1089;&#1076;&#1074;&#1080;&#1085;&#1091;&#1090;&#1099;&#1093; &#1080;&#1084;&#1087;&#1091;&#1083;&#1100;&#1089;&#1085;&#1099;&#1093; &#1086;&#1090;&#1082;&#1083;&#1080;&#1082;&#1086;&#1074;.'</span>, <span class="keyword">...</span>
       <span class="string">'FontSize'</span>, 18);
-surf(Y_2);
-snapnow;
+surf(Y_2)
+<span class="comment">%snapnow;</span>
 saveas(gcf, <span class="string">'../results/method_2'</span>, <span class="string">'jpg'</span>);
 
-<span class="comment">%save('../results/workspace.mat');</span>
+figure;
+surf(Y_1);
+view(2);
+snapnow;
+saveas(gcf, <span class="string">'../results/2D-view'</span>, <span class="string">'jpg'</span>);
+
+save(<span class="string">'../results/workspace.mat'</span>);
 
 close <span class="string">all</span>;
-</pre><img vspace="5" hspace="5" src="plot_out_signals_01.png" style="width:560px;height:420px;" alt=""> <img vspace="5" hspace="5" src="plot_out_signals_02.png" style="width:560px;height:420px;" alt=""> <pre class="codeinput"><span class="keyword">end</span>
+</pre><img vspace="5" hspace="5" src="plot_out_signals_01.png" style="width:560px;height:420px;" alt=""> <img vspace="5" hspace="5" src="plot_out_signals_02.png" style="width:560px;height:420px;" alt=""> <img vspace="5" hspace="5" src="plot_out_signals_03.png" style="width:560px;height:420px;" alt=""> <pre class="codeinput"><span class="keyword">end</span>
 </pre><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2016a</a><br></p></div><!--
 ##### SOURCE BEGIN #####
 function [] = plot_out_signals()
@@ -164,20 +170,26 @@ xls_range_2 = 'A975:M988';
 Y_1 = xlsread(file_name_1, xls_range_1);
 Y_2 = xlsread(file_name_2, xls_range_2);
 
-%figure;
+figure;
 title('Метод 1. Вычисление дискретной свертки.', 'FontSize', 18);
-surf(Y_1);
-snapnow;
+surf(Y_1)
+%snapnow;
 saveas(gcf, '../results/method_1', 'jpg');
 
-%figure;
+figure;
 title('Метод 2. Суммирование взвешенных и сдвинутых импульсных откликов.', ...
       'FontSize', 18);
-surf(Y_2);
-snapnow;
+surf(Y_2)
+%snapnow;
 saveas(gcf, '../results/method_2', 'jpg');
 
-%save('../results/workspace.mat');
+figure;
+surf(Y_1);
+view(2);
+snapnow;
+saveas(gcf, '../results/2D-view', 'jpg');
+
+save('../results/workspace.mat');
 
 close all;
 end
