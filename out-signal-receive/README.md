@@ -15,6 +15,14 @@
 
   <a href="https://www.codecogs.com/eqnedit.php?latex=x(n_1,&space;n_2)&space;=&space;\begin{bmatrix}&space;&&space;3&space;&&space;3&space;&&space;&&space;5&space;&&space;&&space;\\&space;4&space;&&space;2&space;&&space;2&space;&&space;4&space;&&space;&&space;4&space;&&space;4\\&space;5&space;&&space;3&space;&&space;2&space;&&space;5&space;&&space;3&space;&&space;4&space;&&space;7\\&space;5&space;&&space;4&space;&&space;2&space;&&space;&&space;&&space;4&space;&&space;\\&space;&&space;4&space;&&space;1&space;&&space;4&space;&&space;&&space;&&space;8\\&space;3&space;&&space;3&space;&&space;2&space;&&space;&&space;2&space;&&space;4&space;&&space;5\\&space;&&space;1&space;&&space;3&space;&&space;4&space;&&space;&&space;4&space;&&space;6\\&space;&&space;4&space;&&space;&&space;5&space;&&space;5&space;&&space;&&space;\end{bmatrix}" target="_blank"><img src="https://latex.codecogs.com/png.latex?x(n_1,&space;n_2)&space;=&space;\begin{bmatrix}&space;&&space;3&space;&&space;3&space;&&space;&&space;5&space;&&space;&&space;\\&space;4&space;&&space;2&space;&&space;2&space;&&space;4&space;&&space;&&space;4&space;&&space;4\\&space;5&space;&&space;3&space;&&space;2&space;&&space;5&space;&&space;3&space;&&space;4&space;&&space;7\\&space;5&space;&&space;4&space;&&space;2&space;&&space;&&space;&&space;4&space;&&space;\\&space;&&space;4&space;&&space;1&space;&&space;4&space;&&space;&&space;&&space;8\\&space;3&space;&&space;3&space;&&space;2&space;&&space;&&space;2&space;&&space;4&space;&&space;5\\&space;&&space;1&space;&&space;3&space;&&space;4&space;&&space;&&space;4&space;&&space;6\\&space;&&space;4&space;&&space;&&space;5&space;&&space;5&space;&&space;&&space;\end{bmatrix}" title="x(n_1, n_2) = \begin{bmatrix} & 3 & 3 & & 5 & & \\ 4 & 2 & 2 & 4 & & 4 & 4\\ 5 & 3 & 2 & 5 & 3 & 4 & 7\\ 5 & 4 & 2 & & & 4 & \\ & 4 & 1 & 4 & & & 8\\ 3 & 3 & 2 & & 2 & 4 & 5\\ & 1 & 3 & 4 & & 4 & 6\\ & 4 & & 5 & 5 & & \end{bmatrix}" /></a>
 
+  ## Method 1
+  
   ![Method 1](https://github.com/dleliuhin/MDSP/blob/master/out-signal-receive/results/method_1.jpg)
   
+  ## Method 2
+  
   ![Method 2](https://github.com/dleliuhin/MDSP/blob/master/out-signal-receive/results/method_2.jpg)
+  
+  ## View from above
+  
+  ![View from above](https://github.com/dleliuhin/MDSP/blob/master/out-signal-receive/results/2D-view.jpg)
