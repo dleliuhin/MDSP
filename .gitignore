@@ -1,0 +1,8 @@
+# For Qt build folders
+
+build*/
+
+#For Qt temporary files
+
+*.pro
+*.pro.user

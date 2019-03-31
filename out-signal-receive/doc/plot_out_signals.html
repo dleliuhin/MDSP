@@ -1,0 +1,185 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>plot_out_signals</title><meta name="generator" content="MATLAB 9.0"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2019-03-31"><meta name="DC.source" content="plot_out_signals.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h2>Contents</h2><div><ul><li><a href="#2">PLOT_OUT_SIGNALS</a></li><li><a href="#3">Code</a></li></ul></div><pre class="codeinput"><span class="keyword">function</span> [] = plot_out_signals()
+</pre><h2>PLOT_OUT_SIGNALS<a name="2"></a></h2><p>Summary of this function goes here.</p><div><ul><li>Syntax</li></ul></div><p>[] = PLOT_OUT_SIGNALS()</p><div><ul><li>Input</li></ul></div><p>-- INPUTARGS -</p><div><ul><li>Output</li></ul></div><p>-- OUTPUTARGS -</p><div><ul><li>Examples:</li></ul></div><p>Provide sample usage code here</p><div><ul><li>See also:</li></ul></div><p>List related files here</p><div><ul><li>Author: Dmitrii Leliuhin</li><li>Email: <a href="mailto:dleliuhin@mail.ru">dleliuhin@mail.ru</a></li><li>Date: 31/03/2019 15:18:11</li><li>Version: 1.0 $</li><li>Requirements: PCWIN64, MatLab R2016a</li></ul></div><div><ul><li>Warning:</li></ul></div><div><ol><li>Warnings list.</li></ol></div><div><ul><li>TODO:</li></ul></div><div><ol><li>TODO list.</li></ol></div><h2>Code<a name="3"></a></h2><pre class="codeinput">clc;
+clear <span class="string">all</span>;
+close <span class="string">all</span>;
+
+y.rows = 14;
+y.cols = 13;
+
+file_name_1 = <span class="string">'../results/method_1.xls'</span>;
+file_name_2 = <span class="string">'../results/method_2.xls'</span>;
+
+Y_1 = zeros(y.rows, y.cols);
+Y_2 = zeros(y.rows, y.cols);
+
+xls_range_1 = <span class="string">'A23:M36'</span>;
+xls_range_2 = <span class="string">'A975:M988'</span>;
+
+Y_1 = xlsread(file_name_1, xls_range_1);
+Y_2 = xlsread(file_name_2, xls_range_2);
+
+<span class="comment">%figure;</span>
+title(<span class="string">'&#1052;&#1077;&#1090;&#1086;&#1076; 1. &#1042;&#1099;&#1095;&#1080;&#1089;&#1083;&#1077;&#1085;&#1080;&#1077; &#1076;&#1080;&#1089;&#1082;&#1088;&#1077;&#1090;&#1085;&#1086;&#1081; &#1089;&#1074;&#1077;&#1088;&#1090;&#1082;&#1080;.'</span>, <span class="string">'FontSize'</span>, 18);
+surf(Y_1);
+snapnow;
+saveas(gcf, <span class="string">'../results/method_1'</span>, <span class="string">'jpg'</span>);
+
+<span class="comment">%figure;</span>
+title(<span class="string">'&#1052;&#1077;&#1090;&#1086;&#1076; 2. &#1057;&#1091;&#1084;&#1084;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1080;&#1077; &#1074;&#1079;&#1074;&#1077;&#1096;&#1077;&#1085;&#1085;&#1099;&#1093; &#1080; &#1089;&#1076;&#1074;&#1080;&#1085;&#1091;&#1090;&#1099;&#1093; &#1080;&#1084;&#1087;&#1091;&#1083;&#1100;&#1089;&#1085;&#1099;&#1093; &#1086;&#1090;&#1082;&#1083;&#1080;&#1082;&#1086;&#1074;.'</span>, <span class="keyword">...</span>
+      <span class="string">'FontSize'</span>, 18);
+surf(Y_2);
+snapnow;
+saveas(gcf, <span class="string">'../results/method_2'</span>, <span class="string">'jpg'</span>);
+
+<span class="comment">%save('../results/workspace.mat');</span>
+
+close <span class="string">all</span>;
+</pre><img vspace="5" hspace="5" src="plot_out_signals_01.png" style="width:560px;height:420px;" alt=""> <img vspace="5" hspace="5" src="plot_out_signals_02.png" style="width:560px;height:420px;" alt=""> <pre class="codeinput"><span class="keyword">end</span>
+</pre><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2016a</a><br></p></div><!--
+##### SOURCE BEGIN #####
+function [] = plot_out_signals()
+%% PLOT_OUT_SIGNALS 
+% Summary of this function goes here. 
+% 
+% * Syntax 
+% 
+% [] = PLOT_OUT_SIGNALS()
+% 
+% * Input 
+% 
+% REPLACE_WITH_DASH_DASH INPUTARGS -  
+% 
+% * Output 
+% 
+% REPLACE_WITH_DASH_DASH OUTPUTARGS -  
+% 
+% * Examples: 
+% 
+% Provide sample usage code here
+% 
+% * See also: 
+% 
+% List related files here 
+% 
+% * Author: Dmitrii Leliuhin 
+% * Email: dleliuhin@mail.ru 
+% * Date: 31/03/2019 15:18:11 
+% * Version: 1.0 $ 
+% * Requirements: PCWIN64, MatLab R2016a 
+% 
+% * Warning: 
+% 
+% # Warnings list. 
+% 
+% * TODO: 
+% 
+% # TODO list. 
+% 
+
+%% Code 
+clc;
+clear all;
+close all;
+
+y.rows = 14;
+y.cols = 13;
+
+file_name_1 = '../results/method_1.xls';
+file_name_2 = '../results/method_2.xls';
+
+Y_1 = zeros(y.rows, y.cols);
+Y_2 = zeros(y.rows, y.cols);
+
+xls_range_1 = 'A23:M36';
+xls_range_2 = 'A975:M988';
+
+Y_1 = xlsread(file_name_1, xls_range_1);
+Y_2 = xlsread(file_name_2, xls_range_2);
+
+%figure;
+title('Метод 1. Вычисление дискретной свертки.', 'FontSize', 18);
+surf(Y_1);
+snapnow;
+saveas(gcf, '../results/method_1', 'jpg');
+
+%figure;
+title('Метод 2. Суммирование взвешенных и сдвинутых импульсных откликов.', ...
+      'FontSize', 18);
+surf(Y_2);
+snapnow;
+saveas(gcf, '../results/method_2', 'jpg');
+
+%save('../results/workspace.mat');
+
+close all;
+end
+##### SOURCE END #####
+--></body></html>
