@@ -6,6 +6,8 @@
 
 ## [The output signal receiving using an FIR filter.](out-signal-receive/README.md)
 
+## [Anisotropic and threshold statistical filtering methods.](statistical-filtering-methods/README.md)
+
 ## License
 
 [MIT](https://github.com/dleliuhin/MDSP/blob/master/LICENSE)
