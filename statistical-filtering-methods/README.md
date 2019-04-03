@@ -39,4 +39,8 @@
 
   If <img src="https://latex.codecogs.com/gif.latex?\left&space;|&space;f(i,j)-g(i,j)&space;\right&space;|&space;\leq&space;m*\sigma&space;(i,j)" title="\left | f(i,j)-g(i,j) \right | \leq m*\sigma (i,j)" />, то <img src="https://latex.codecogs.com/gif.latex?f(i,j)=f(i,j)" title="f(i,j)=f(i,j)" />, otherwise 
 
-  <img src="https://latex.codecogs.com/gif.latex?f(i,j)=\frac{1}{N^{2}-1}*(\sum_{k=-\frac{N-1}{2}}^{&plus;\frac{N-1}{2}}&space;\sum_{l=-\frac{N-1}{2}}^{-1}&space;f(i&plus;k,j&plus;l)&plus;\sum_{k=&plus;1}^{\frac{N-1}{2}}f(i&plus;k,j))&plus;(\sum_{k=-\frac{N-1}{2}}^{\frac{N-1}{2}}&space;\sum_{l=&plus;1}^{\frac{N-1}{2}}&space;f(i&plus;k,j&plus;l)&plus;\sum_{k=-\frac{N-1}{2}}^{-1}&space;f(i&plus;k,j))" title="f(i,j)=\frac{1}{N^{2}-1}*(\sum_{k=-\frac{N-1}{2}}^{+\frac{N-1}{2}} \sum_{l=-\frac{N-1}{2}}^{-1} f(i+k,j+l)+\sum_{k=+1}^{\frac{N-1}{2}}f(i+k,j))+(\sum_{k=-\frac{N-1}{2}}^{\frac{N-1}{2}} \sum_{l=+1}^{\frac{N-1}{2}} f(i+k,j+l)+\sum_{k=-\frac{N-1}{2}}^{-1} f(i+k,j))" />, usually N = 3, 5, 7.
+  <img src="https://latex.codecogs.com/gif.latex?f(i,j)=\frac{1}{N^{2}-1}*(\sum_{k=-\frac{N-1}{2}}^{&plus;\frac{N-1}{2}}&space;\sum_{l=-\frac{N-1}{2}}^{-1}&space;f(i&plus;k,j&plus;l)&plus;\sum_{k=&plus;1}^{\frac{N-1}{2}}f(i&plus;k,j))&plus;(\sum_{k=-\frac{N-1}{2}}^{\frac{N-1}{2}}&space;\sum_{l=&plus;1}^{\frac{N-1}{2}}&space;f(i&plus;k,j&plus;l)&plus;\sum_{k=-\frac{N-1}{2}}^{-1}&space;f(i&plus;k,j))" title="f(i,j)=\frac{1}{N^{2}-1}*(\sum_{k=-\frac{N-1}{2}}^{+\frac{N-1}{2}} \sum_{l=-\frac{N-1}{2}}^{-1} f(i+k,j+l)+\sum_{k=+1}^{\frac{N-1}{2}}f(i+k,j))+(\sum_{k=-\frac{N-1}{2}}^{\frac{N-1}{2}} \sum_{l=+1}^{\frac{N-1}{2}} f(i+k,j+l)+\sum_{k=-\frac{N-1}{2}}^{-1} f(i+k,j))" />, 
+
+  usually N = 3, 5, 7.
+
+  ## [Task](TASK.md)
