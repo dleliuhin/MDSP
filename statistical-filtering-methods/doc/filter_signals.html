@@ -1,0 +1,340 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>filter_signals</title><meta name="generator" content="MATLAB 9.0"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2019-04-04"><meta name="DC.source" content="filter_signals.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h2>Contents</h2><div><ul><li><a href="#2">FILTER_SIGNALS</a></li><li><a href="#3">Code</a></li></ul></div><pre class="codeinput"><span class="keyword">function</span> [] = filter_signals()
+</pre><h2>FILTER_SIGNALS<a name="2"></a></h2><p>Summary of this function goes here.</p><div><ul><li>Syntax</li></ul></div><p>[OUTPUTARGS] = FILTER_SIGNALS(INPUTARGS)</p><div><ul><li>Input</li></ul></div><p>-- INPUTARGS -</p><div><ul><li>Output</li></ul></div><p>-- OUTPUTARGS -</p><div><ul><li>Examples:</li></ul></div><p>Provide sample usage code here</p><div><ul><li>See also:</li></ul></div><p>List related files here</p><div><ul><li>Author: Dmitrii Leliuhin</li><li>Email: <a href="mailto:dleliuhin@mail.ru">dleliuhin@mail.ru</a></li><li>Date: 04/04/2019 22:55:53</li><li>Version: 1.0 $</li><li>Requirements: PCWIN64, MatLab R2016a</li></ul></div><div><ul><li>Warning:</li></ul></div><div><ol><li>Warnings list.</li></ol></div><div><ul><li>TODO:</li></ul></div><div><ol><li>TODO list.</li></ol></div><h2>Code<a name="3"></a></h2><pre class="codeinput">clc;
+clear <span class="string">all</span>;
+close <span class="string">all</span>;
+
+y.rows = 14;
+y.cols = 13;
+
+file_name = <span class="string">'../results/rash3.xls'</span>;
+
+mat_noise = zeros(y.rows, y.cols);
+
+mat_anis_filt = zeros(y.rows, y.cols);
+mat_diff_anis = zeros(y.rows, y.cols);
+
+mat_stat_filt = zeros(y.rows, y.cols);
+mat_diff_stat = zeros(y.rows, y.cols);
+
+xls_range_noise = <span class="string">'A4:M17'</span>;
+
+xls_range_1 = <span class="string">'A21:M34'</span>;
+xls_range_2 = <span class="string">'A38:M51'</span>;
+
+xls_range_3 = <span class="string">'A76:M89'</span>;
+xls_range_4 = <span class="string">'A93:M106'</span>;
+
+mat_noise = xlsread(file_name, xls_range_noise);
+
+mat_anis_filt = xlsread(file_name, xls_range_1);
+mat_diff_anis = xlsread(file_name, xls_range_2);
+
+mat_stat_filt = xlsread(file_name, xls_range_3);
+mat_diff_stat = xlsread(file_name, xls_range_4);
+
+<span class="comment">%==========================================================================</span>
+
+figure;
+title(<span class="string">'Noised signal 2D.'</span>, <span class="string">'FontSize'</span>, 18);
+surf(mat_noise);
+view(2);
+snapnow;
+saveas(gcf, <span class="string">'../results/2D-view-noised'</span>, <span class="string">'jpg'</span>);
+
+figure;
+title(<span class="string">'Noised signal.'</span>, <span class="string">'FontSize'</span>, 18);
+surf(mat_noise)
+saveas(gcf, <span class="string">'../results/noised'</span>, <span class="string">'jpg'</span>);
+
+<span class="comment">%==========================================================================</span>
+
+<span class="comment">%==========================================================================</span>
+
+figure;
+title(<span class="string">'Anisotropic filtered signal 2D.'</span>, <span class="string">'FontSize'</span>, 18);
+surf(mat_anis_filt);
+view(2)
+snapnow;
+saveas(gcf, <span class="string">'../results/2D-view-anisotr-filter'</span>, <span class="string">'jpg'</span>);
+
+figure;
+title(<span class="string">'Anisotropic filtered signal.'</span>, <span class="string">'FontSize'</span>, 18);
+surf(mat_anis_filt)
+saveas(gcf, <span class="string">'../results/anisotr-filter'</span>, <span class="string">'jpg'</span>);
+
+<span class="comment">%==========================================================================</span>
+
+figure;
+title(<span class="string">'Anisotropic difference 2D.'</span>, <span class="string">'FontSize'</span>, 18);
+surf(mat_diff_anis);
+view(2)
+snapnow;
+saveas(gcf, <span class="string">'../results/2D-view-anisotr-diff'</span>, <span class="string">'jpg'</span>);
+
+figure;
+title(<span class="string">'Anisotropic difference.'</span>, <span class="string">'FontSize'</span>, 18);
+surf(mat_diff_anis)
+saveas(gcf, <span class="string">'../results/anisotr-diff'</span>, <span class="string">'jpg'</span>);
+
+<span class="comment">%==========================================================================</span>
+
+<span class="comment">%==========================================================================</span>
+
+figure;
+title(<span class="string">'Statistic filter 2D.'</span>, <span class="string">'FontSize'</span>, 18);
+surf(mat_stat_filt);
+view(2)
+snapnow;
+saveas(gcf, <span class="string">'../results/2D-view-stat-filter'</span>, <span class="string">'jpg'</span>);
+
+figure;
+title(<span class="string">'Statistic filter.'</span>, <span class="string">'FontSize'</span>, 18);
+surf(mat_stat_filt)
+saveas(gcf, <span class="string">'../results/stat-filter'</span>, <span class="string">'jpg'</span>);
+
+<span class="comment">%==========================================================================</span>
+
+figure;
+title(<span class="string">'Statistic difference 2D.'</span>, <span class="string">'FontSize'</span>, 18);
+surf(mat_diff_stat);
+view(2)
+snapnow;
+saveas(gcf, <span class="string">'../results/2D-view-stat-diff'</span>, <span class="string">'jpg'</span>);
+
+figure;
+title(<span class="string">'Statistic difference.'</span>, <span class="string">'FontSize'</span>, 18);
+surf(mat_diff_stat)
+saveas(gcf, <span class="string">'../results/stat-diff'</span>, <span class="string">'jpg'</span>);
+
+<span class="comment">%==========================================================================</span>
+
+save(<span class="string">'../results/workspace.mat'</span>);
+
+close <span class="string">all</span>;
+</pre><img vspace="5" hspace="5" src="filter_signals_01.png" style="width:560px;height:420px;" alt=""> <img vspace="5" hspace="5" src="filter_signals_02.png" style="width:560px;height:420px;" alt=""> <img vspace="5" hspace="5" src="filter_signals_03.png" style="width:560px;height:420px;" alt=""> <img vspace="5" hspace="5" src="filter_signals_04.png" style="width:560px;height:420px;" alt=""> <img vspace="5" hspace="5" src="filter_signals_05.png" style="width:560px;height:420px;" alt=""> <img vspace="5" hspace="5" src="filter_signals_06.png" style="width:560px;height:420px;" alt=""> <img vspace="5" hspace="5" src="filter_signals_07.png" style="width:560px;height:420px;" alt=""> <img vspace="5" hspace="5" src="filter_signals_08.png" style="width:560px;height:420px;" alt=""> <img vspace="5" hspace="5" src="filter_signals_09.png" style="width:560px;height:420px;" alt=""> <img vspace="5" hspace="5" src="filter_signals_10.png" style="width:560px;height:420px;" alt=""> <img vspace="5" hspace="5" src="filter_signals_11.png" style="width:560px;height:420px;" alt=""> <img vspace="5" hspace="5" src="filter_signals_12.png" style="width:560px;height:420px;" alt=""> <img vspace="5" hspace="5" src="filter_signals_13.png" style="width:560px;height:420px;" alt=""> <pre class="codeinput"><span class="keyword">end</span>
+</pre><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2016a</a><br></p></div><!--
+##### SOURCE BEGIN #####
+function [] = filter_signals()
+%% FILTER_SIGNALS 
+% Summary of this function goes here. 
+% 
+% * Syntax 
+% 
+% [OUTPUTARGS] = FILTER_SIGNALS(INPUTARGS)
+% 
+% * Input 
+% 
+% REPLACE_WITH_DASH_DASH INPUTARGS -  
+% 
+% * Output 
+% 
+% REPLACE_WITH_DASH_DASH OUTPUTARGS -  
+% 
+% * Examples: 
+% 
+% Provide sample usage code here
+% 
+% * See also: 
+% 
+% List related files here 
+% 
+% * Author: Dmitrii Leliuhin 
+% * Email: dleliuhin@mail.ru 
+% * Date: 04/04/2019 22:55:53 
+% * Version: 1.0 $ 
+% * Requirements: PCWIN64, MatLab R2016a 
+% 
+% * Warning: 
+% 
+% # Warnings list. 
+% 
+% * TODO: 
+% 
+% # TODO list. 
+% 
+
+%% Code 
+clc;
+clear all;
+close all;
+
+y.rows = 14;
+y.cols = 13;
+
+file_name = '../results/rash3.xls';
+
+mat_noise = zeros(y.rows, y.cols);
+
+mat_anis_filt = zeros(y.rows, y.cols);
+mat_diff_anis = zeros(y.rows, y.cols);
+
+mat_stat_filt = zeros(y.rows, y.cols);
+mat_diff_stat = zeros(y.rows, y.cols);
+
+xls_range_noise = 'A4:M17';
+
+xls_range_1 = 'A21:M34';
+xls_range_2 = 'A38:M51';
+
+xls_range_3 = 'A76:M89';
+xls_range_4 = 'A93:M106';
+
+mat_noise = xlsread(file_name, xls_range_noise);
+
+mat_anis_filt = xlsread(file_name, xls_range_1);
+mat_diff_anis = xlsread(file_name, xls_range_2);
+
+mat_stat_filt = xlsread(file_name, xls_range_3);
+mat_diff_stat = xlsread(file_name, xls_range_4);
+
+%==========================================================================
+
+figure;
+title('Noised signal 2D.', 'FontSize', 18);
+surf(mat_noise);
+view(2);
+snapnow;
+saveas(gcf, '../results/2D-view-noised', 'jpg');
+
+figure;
+title('Noised signal.', 'FontSize', 18);
+surf(mat_noise)
+saveas(gcf, '../results/noised', 'jpg');
+
+%==========================================================================
+
+%==========================================================================
+
+figure;
+title('Anisotropic filtered signal 2D.', 'FontSize', 18);
+surf(mat_anis_filt);
+view(2)
+snapnow;
+saveas(gcf, '../results/2D-view-anisotr-filter', 'jpg');
+
+figure;
+title('Anisotropic filtered signal.', 'FontSize', 18);
+surf(mat_anis_filt)
+saveas(gcf, '../results/anisotr-filter', 'jpg');
+
+%==========================================================================
+
+figure;
+title('Anisotropic difference 2D.', 'FontSize', 18);
+surf(mat_diff_anis);
+view(2)
+snapnow;
+saveas(gcf, '../results/2D-view-anisotr-diff', 'jpg');
+
+figure;
+title('Anisotropic difference.', 'FontSize', 18);
+surf(mat_diff_anis)
+saveas(gcf, '../results/anisotr-diff', 'jpg');
+
+%==========================================================================
+
+%==========================================================================
+
+figure;
+title('Statistic filter 2D.', 'FontSize', 18);
+surf(mat_stat_filt);
+view(2)
+snapnow;
+saveas(gcf, '../results/2D-view-stat-filter', 'jpg');
+
+figure;
+title('Statistic filter.', 'FontSize', 18);
+surf(mat_stat_filt)
+saveas(gcf, '../results/stat-filter', 'jpg');
+
+%==========================================================================
+
+figure;
+title('Statistic difference 2D.', 'FontSize', 18);
+surf(mat_diff_stat);
+view(2)
+snapnow;
+saveas(gcf, '../results/2D-view-stat-diff', 'jpg');
+
+figure;
+title('Statistic difference.', 'FontSize', 18);
+surf(mat_diff_stat)
+saveas(gcf, '../results/stat-diff', 'jpg');
+
+%==========================================================================
+
+save('../results/workspace.mat');
+
+close all;
+end
+
+##### SOURCE END #####
+--></body></html>
