@@ -6,3 +6,6 @@ build*/
 
 *.pro
 *.pro.user
+
+# For VS build folders
+.vs
