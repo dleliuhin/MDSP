@@ -45,8 +45,10 @@ close all;
 y.rows = 14;
 y.cols = 13;
 
-file_name = '../results/rash3.xls';
+file_name_1 = '../results/rash3.xls';
+file_name_2 = '../results/method_1.xls';
 
+mat_origin = zeros(y.rows, y.cols); 
 mat_noise = zeros(y.rows, y.cols);
 
 mat_anis_filt = zeros(y.rows, y.cols);
@@ -55,21 +57,23 @@ mat_diff_anis = zeros(y.rows, y.cols);
 mat_stat_filt = zeros(y.rows, y.cols);
 mat_diff_stat = zeros(y.rows, y.cols);
 
+xls_range_origin = 'A23:M36';
 xls_range_noise = 'A4:M17';
 
 xls_range_1 = 'A21:M34';
-xls_range_2 = 'A38:M51';
 
 xls_range_3 = 'A76:M89';
-xls_range_4 = 'A93:M106';
 
-mat_noise = xlsread(file_name, xls_range_noise);
+mat_origin = xlsread(file_name_2, xls_range_origin); 
+mat_noise = xlsread(file_name_1, xls_range_noise);
 
-mat_anis_filt = xlsread(file_name, xls_range_1);
-mat_diff_anis = xlsread(file_name, xls_range_2);
+mat_anis_filt = xlsread(file_name_1, xls_range_1);
 
-mat_stat_filt = xlsread(file_name, xls_range_3);
-mat_diff_stat = xlsread(file_name, xls_range_4);
+mat_stat_filt = xlsread(file_name_1, xls_range_3);
+
+diff_anis = mat_origin - mat_anis_filt;
+
+diff_stat = mat_origin - mat_stat_filt;
 
 %==========================================================================
 
@@ -105,14 +109,14 @@ saveas(gcf, '../results/anisotr-filter', 'jpg');
 
 figure;
 title('Anisotropic difference 2D.', 'FontSize', 18);
-surf(mat_diff_anis);
+surf(diff_anis);
 view(2)
 snapnow;
 saveas(gcf, '../results/2D-view-anisotr-diff', 'jpg');
 
 figure;
 title('Anisotropic difference.', 'FontSize', 18);
-surf(mat_diff_anis)
+surf(diff_anis)
 saveas(gcf, '../results/anisotr-diff', 'jpg');
 
 %==========================================================================
@@ -135,14 +139,14 @@ saveas(gcf, '../results/stat-filter', 'jpg');
 
 figure;
 title('Statistic difference 2D.', 'FontSize', 18);
-surf(mat_diff_stat);
+surf(diff_stat);
 view(2)
 snapnow;
 saveas(gcf, '../results/2D-view-stat-diff', 'jpg');
 
 figure;
 title('Statistic difference.', 'FontSize', 18);
-surf(mat_diff_stat)
+surf(diff_stat)
 saveas(gcf, '../results/stat-diff', 'jpg');
 
 %==========================================================================
